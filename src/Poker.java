@@ -8,10 +8,26 @@ public class Poker {
     private final Player player;
     private List<Card> deck;
     private final Scanner in;
-    private int chips = 25;
+    private int chips = 100;
     private int wager;
     private int cardsChosen;
     private int remove = -1;
+
+    public static void main(String[] args) {
+        System.out.println("##############################################################################");
+        System.out.println("#                                                                            #");
+        System.out.println("#                   ######    #####   #    #  ######  #####W                 #");
+        System.out.println("#                   #     #  #     #  #   #   #       #     #                #");
+        System.out.println("#                   ######   #     #  ###     ######  ######                 #");
+        System.out.println("#                   #        #     #  #   #   #       #     #                #");
+        System.out.println("#                   #         #####   #    #  ######  #      #               #");
+        System.out.println("#                                                                            #");
+        System.out.println("#  A human v. CPU rendition of the classic card game                         #");
+        System.out.println("#  Poker                                                                     #");
+        System.out.println("#                                                                            #");
+        System.out.println("##############################################################################");
+        new Poker().play();
+    }
 
     public Poker() {
         this.player = new Player();
@@ -165,8 +181,4 @@ public class Poker {
         System.exit(0);
     }
 
-    public static void main(String[] args) {
-        System.out.println("POKER");
-        new Poker().play();
-    }
 }
